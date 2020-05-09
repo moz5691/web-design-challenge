@@ -9,7 +9,12 @@ const Intro = () => {
       </Header>
       <Divider></Divider>
       <>
-        <Image fluid src="assets/img/Fig1.png" alt="MaxTemp" size="medium" />
+        <Image
+          floated="left"
+          src="assets/img/Fig1.png"
+          alt="MaxTemp"
+          size="medium"
+        />
         <h4>
           The purpose of this project was to analyze how weather changes as you
           get close to the equator. To accomplish this analysis, we first pulled
