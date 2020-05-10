@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { csv } from 'd3';
-import { Table, Segment, Loader, Dimmer } from 'semantic-ui-react';
+import { Table, Segment, Loader, Dimmer, Divider } from 'semantic-ui-react';
 
 const Data = () => {
   const [data, setData] = useState();
@@ -23,12 +23,13 @@ const Data = () => {
     );
   return (
     <Segment>
-      <h3>Data</h3>
+      <h2 class="ui header teal">Data</h2>
       <p>
         The following table includes all of the data used for plotting durring
         this project.
       </p>
-      <Table striped>
+      <Divider />
+      <Table stripped celled fixed singleline unstackable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>City_ID</Table.HeaderCell>
