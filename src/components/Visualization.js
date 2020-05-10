@@ -11,8 +11,27 @@ import {
 
 const Visualization = ({ handlePlotchoice }) => {
   const [atMain, setAtmain] = useState(true);
+  const [selected, setSelected] = useState({
+    maxtemp: false,
+    humidity: false,
+    cloudiness: false,
+    windspeed: false,
+  });
+
+  const selectFigure = (name) => {
+    setSelected({
+      maxTemp: false,
+      humidity: false,
+      cloudiness: false,
+      windSpeed: false,
+    });
+    if (name !== '') {
+      setSelected({ [name]: true });
+    }
+  };
+
   return (
-    <Segment>
+    <Segment color="teal">
       <Header as="h3" color="teal">
         Visualizations
       </Header>
@@ -28,7 +47,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('MaxTemp');
                 setAtmain(false);
+                selectFigure('maxTemp');
               }}
+              disabled={selected['maxTemp']}
             />
           </Grid.Column>
 
@@ -40,7 +61,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Humidity');
                 setAtmain(false);
+                selectFigure('humidity');
               }}
+              disabled={selected['humidity']}
             />
           </Grid.Column>
 
@@ -52,7 +75,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Cloudiness');
                 setAtmain(false);
+                selectFigure('cloudiness');
               }}
+              disabled={selected['cloudiness']}
             />
           </Grid.Column>
 
@@ -64,7 +89,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('WindSpeed');
                 setAtmain(false);
+                selectFigure('windSpeed');
               }}
+              disabled={selected['windSpeed']}
             />
           </Grid.Column>
         </Grid.Row>
@@ -78,7 +105,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('MaxTemp');
                 setAtmain(false);
+                selectFigure('maxTemp');
               }}
+              disabled={selected['maxTemp']}
             />
           </Grid.Column>
 
@@ -90,7 +119,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Humidity');
                 setAtmain(false);
+                selectFigure('humidity');
               }}
+              disabled={selected['humidity']}
             />
           </Grid.Column>
 
@@ -102,7 +133,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Cloudiness');
                 setAtmain(false);
+                selectFigure('cloudiness');
               }}
+              disabled={selected['cloudiness']}
             />
           </Grid.Column>
 
@@ -114,7 +147,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('WindSpeed');
                 setAtmain(false);
+                selectFigure('windSpeed');
               }}
+              disabled={selected['windSpeed']}
             />
           </Grid.Column>
         </Grid.Row>
@@ -128,7 +163,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('MaxTemp');
                 setAtmain(false);
+                selectFigure('maxTemp');
               }}
+              disabled={selected['maxTemp']}
             />
           </Grid.Column>
 
@@ -140,7 +177,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Humidity');
                 setAtmain(false);
+                selectFigure('humidity');
               }}
+              disabled={selected['humidity']}
             />
           </Grid.Column>
 
@@ -152,7 +191,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('Cloudiness');
                 setAtmain(false);
+                selectFigure('cloudiness');
               }}
+              disabled={selected['cloudiness']}
             />
           </Grid.Column>
 
@@ -164,7 +205,9 @@ const Visualization = ({ handlePlotchoice }) => {
               onClick={() => {
                 handlePlotchoice('WindSpeed');
                 setAtmain(false);
+                selectFigure('windSpeed');
               }}
+              disabled={selected['windSpeed']}
             />
           </Grid.Column>
         </Grid.Row>
@@ -174,6 +217,7 @@ const Visualization = ({ handlePlotchoice }) => {
         onClick={() => {
           handlePlotchoice('Intro');
           setAtmain(true);
+          selectFigure('');
         }}
         disabled={atMain}
         fluid

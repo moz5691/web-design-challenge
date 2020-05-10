@@ -3,7 +3,7 @@ import { Image, Header, Divider, Segment } from 'semantic-ui-react';
 
 const Intro = () => {
   return (
-    <Segment>
+    <Segment color="teal" stacked content>
       <Header as="h2" color="teal">
         Summary: Latitude vs. X
       </Header>

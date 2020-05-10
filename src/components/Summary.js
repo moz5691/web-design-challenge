@@ -9,7 +9,7 @@ const Summary = ({ plotchoice }) => {
   if (plotchoice === 'Intro') return <Intro />;
 
   return (
-    <Segment>
+    <Segment color="teal" stacked content>
       <h3 style={{ display: 'inline-block', margin: 10 }}>
         {info[plotchoice].title}
       </h3>
