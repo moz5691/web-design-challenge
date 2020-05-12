@@ -25,7 +25,7 @@ const Data = () => {
     <Segment>
       <h2 class="ui header teal">Data</h2>
       <p>
-        The following table includes all of the data used for plotting durring
+        The following table includes all of the data used for plotting during
         this project.
       </p>
       <Divider />

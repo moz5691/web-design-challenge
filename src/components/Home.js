@@ -3,7 +3,7 @@ import Summary from './Summary';
 import Visualization from './Visualization';
 import { Grid } from 'semantic-ui-react';
 
-const Home = ({ description }) => {
+const Home = () => {
   const [plotchoice, setPlotchoice] = useState('Intro');
 
   const handlePlotchoice = (name) => setPlotchoice(name);

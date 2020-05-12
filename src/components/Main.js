@@ -47,7 +47,7 @@ const Main = () => {
             <Home plot="Intro" />
           </Route>
           <Route path="/plots/:name">
-            <Plots description={true} />
+            <Plots />
           </Route>
           <Route path="/data">
             <Data />
