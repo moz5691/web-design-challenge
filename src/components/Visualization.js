@@ -37,9 +37,9 @@ const Visualization = ({ handlePlotchoice }) => {
       </Header>
       <Divider />
 
-      <Grid relaxed="tight">
-        <Grid.Row columns={4} only="mobile">
-          <Grid.Column>
+      <Grid stretched relaxed>
+        <Grid.Row>
+          <Grid.Column mobile={4} computer={8} stretched>
             <Image
               alt="MaxTemp"
               fluid
@@ -53,7 +53,7 @@ const Visualization = ({ handlePlotchoice }) => {
             />
           </Grid.Column>
 
-          <Grid.Column>
+          <Grid.Column mobile={4} computer={8} stretched>
             <Image
               alt="Humidity"
               fluid
@@ -67,7 +67,7 @@ const Visualization = ({ handlePlotchoice }) => {
             />
           </Grid.Column>
 
-          <Grid.Column>
+          <Grid.Column mobile={4} computer={8} stretched>
             <Image
               alt="Cloudiness"
               fluid
@@ -81,123 +81,7 @@ const Visualization = ({ handlePlotchoice }) => {
             />
           </Grid.Column>
 
-          <Grid.Column>
-            <Image
-              alt="WindSpeed"
-              fluid
-              src="assets/img/Fig4.png"
-              onClick={() => {
-                handlePlotchoice('WindSpeed');
-                setAtmain(false);
-                selectFigure('windSpeed');
-              }}
-              disabled={selected['windSpeed']}
-            />
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row columns={2} only="tablet">
-          <Grid.Column>
-            <Image
-              alt="MaxTemp"
-              fluid
-              src="assets/img/Fig1.png"
-              onClick={() => {
-                handlePlotchoice('MaxTemp');
-                setAtmain(false);
-                selectFigure('maxTemp');
-              }}
-              disabled={selected['maxTemp']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image
-              alt="Humidity"
-              fluid
-              src="assets/img/Fig2.png"
-              onClick={() => {
-                handlePlotchoice('Humidity');
-                setAtmain(false);
-                selectFigure('humidity');
-              }}
-              disabled={selected['humidity']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image
-              alt="Cloudiness"
-              fluid
-              src="assets/img/Fig3.png"
-              onClick={() => {
-                handlePlotchoice('Cloudiness');
-                setAtmain(false);
-                selectFigure('cloudiness');
-              }}
-              disabled={selected['cloudiness']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image
-              alt="WindSpeed"
-              fluid
-              src="assets/img/Fig4.png"
-              onClick={() => {
-                handlePlotchoice('WindSpeed');
-                setAtmain(false);
-                selectFigure('windSpeed');
-              }}
-              disabled={selected['windSpeed']}
-            />
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row columns={2} only="computer">
-          <Grid.Column>
-            <Image
-              alt="MaxTemp"
-              fluid
-              src="assets/img/Fig1.png"
-              onClick={() => {
-                handlePlotchoice('MaxTemp');
-                setAtmain(false);
-                selectFigure('maxTemp');
-              }}
-              disabled={selected['maxTemp']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image
-              alt="Humidity"
-              fluid
-              src="assets/img/Fig2.png"
-              onClick={() => {
-                handlePlotchoice('Humidity');
-                setAtmain(false);
-                selectFigure('humidity');
-              }}
-              disabled={selected['humidity']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image
-              alt="Cloudiness"
-              fluid
-              src="assets/img/Fig3.png"
-              onClick={() => {
-                handlePlotchoice('Cloudiness');
-                setAtmain(false);
-                selectFigure('cloudiness');
-              }}
-              disabled={selected['cloudiness']}
-            />
-          </Grid.Column>
-
-          <Grid.Column>
+          <Grid.Column mobile={4} computer={8} stretched>
             <Image
               alt="WindSpeed"
               fluid
