@@ -10,7 +10,7 @@ const Data = () => {
       csv('assets/data/cities.csv').then((data) => {
         setData(data);
       });
-    }, 1000);
+    }, 800);
   }, []);
 
   if (data === undefined)
@@ -24,10 +24,10 @@ const Data = () => {
   return (
     <Segment>
       <h2 class="ui header teal">Data</h2>
-      <p>
+      <h4>
         The following table includes all of the data used for plotting during
         this project.
-      </p>
+      </h4>
       <Divider />
       <Table stripped celled fixed singleline unstackable>
         <Table.Header>

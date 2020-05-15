@@ -32,7 +32,7 @@ const Visualization = ({ handlePlotchoice }) => {
 
   return (
     <Segment color="teal">
-      <Header as="h3" color="teal">
+      <Header as="h3" color="teal" style={{ marginTop: '5px' }}>
         Visualizations
       </Header>
       <Divider />
@@ -41,6 +41,7 @@ const Visualization = ({ handlePlotchoice }) => {
         <Grid.Row>
           <Grid.Column mobile={4} computer={8} stretched>
             <Image
+              style={{ borderColor: 'teal' }}
               alt="MaxTemp"
               fluid
               src="assets/img/Fig1.png"
@@ -50,11 +51,13 @@ const Visualization = ({ handlePlotchoice }) => {
                 selectFigure('maxTemp');
               }}
               disabled={selected['maxTemp']}
+              bordered={selected['maxTemp']}
             />
           </Grid.Column>
 
           <Grid.Column mobile={4} computer={8} stretched>
             <Image
+              style={{ borderColor: 'teal' }}
               alt="Humidity"
               fluid
               src="assets/img/Fig2.png"
@@ -64,11 +67,13 @@ const Visualization = ({ handlePlotchoice }) => {
                 selectFigure('humidity');
               }}
               disabled={selected['humidity']}
+              bordered={selected['humidity']}
             />
           </Grid.Column>
 
           <Grid.Column mobile={4} computer={8} stretched>
             <Image
+              style={{ borderColor: 'teal' }}
               alt="Cloudiness"
               fluid
               src="assets/img/Fig3.png"
@@ -78,11 +83,13 @@ const Visualization = ({ handlePlotchoice }) => {
                 selectFigure('cloudiness');
               }}
               disabled={selected['cloudiness']}
+              bordered={selected['cloudiness']}
             />
           </Grid.Column>
 
           <Grid.Column mobile={4} computer={8} stretched>
             <Image
+              style={{ borderColor: 'teal' }}
               alt="WindSpeed"
               fluid
               src="assets/img/Fig4.png"
@@ -92,6 +99,7 @@ const Visualization = ({ handlePlotchoice }) => {
                 selectFigure('windSpeed');
               }}
               disabled={selected['windSpeed']}
+              bordered={selected['windSpeed']}
             />
           </Grid.Column>
         </Grid.Row>
@@ -105,6 +113,7 @@ const Visualization = ({ handlePlotchoice }) => {
         }}
         disabled={atMain}
         fluid
+        color="teal"
       >
         <Icon name="info" />
         Return to Summary

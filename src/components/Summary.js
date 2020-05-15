@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, Segment, Button, Icon } from 'semantic-ui-react';
+import { Image, Segment, Button, Icon, Header } from 'semantic-ui-react';
 import Intro from './Intro';
 import info from './Info';
 
@@ -10,9 +10,13 @@ const Summary = ({ plotchoice }) => {
 
   return (
     <Segment color="teal" stacked content>
-      <h3 style={{ display: 'inline-block', margin: 10 }}>
+      <Header
+        as="h3"
+        color="teal"
+        style={{ display: 'inline-block', margin: 10 }}
+      >
         {info[plotchoice].title}
-      </h3>
+      </Header>
       <Button
         size="mini"
         onClick={() => setDisctoggle(!desctoggle)}
